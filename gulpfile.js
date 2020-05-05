@@ -9,7 +9,7 @@ gulp.task("hello", function(done) {
 });
 
 // Static server
-gulp.task("browser-sync", function() {
+gulp.task("sync", function() {
   browserSync.init({
       server: {
           baseDir: "./"
