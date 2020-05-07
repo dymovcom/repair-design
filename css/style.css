@@ -332,6 +332,7 @@ template {
     color: #FFFFFF; }
 
 .container {
+  width: 90%;
   max-width: 1256px;
   margin: auto; }
 
@@ -374,6 +375,8 @@ template {
 
 .hero {
   position: relative;
+  display: flex;
+  align-items: center;
   padding-top: 88px;
   background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
   color: #FFFFFF;
@@ -386,6 +389,20 @@ template {
     height: 100%; }
   .hero__title {
     margin: 0; }
+  .hero__scroll-down {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: 0;
+    bottom: 0;
+    min-width: 247px;
+    min-height: 97px;
+    background-color: #131313;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none; }
 
 .instagram {
   display: flex;
