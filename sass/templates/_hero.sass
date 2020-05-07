@@ -12,8 +12,17 @@
     top: 0  
     max-width: 90px
     height: 100%
+  &__content
+    max-width: 670px
   &__title
     margin: 0
+  &__text
+    font-size: 22px
+    line-height: 30px
+    max-width: 500px
+    margin-bottom: 40px
+  &__button
+    margin-right: 20px
   &__scroll-down
     position: absolute
     display: flex
@@ -25,6 +34,7 @@
     min-height: 97px
     background-color: $dark
     color: $light
+    font-family: "Yeseva One", sans-serif
     font-size: 12px
     text-transform: uppercase
     text-decoration: none
@@ -38,3 +48,10 @@
     text-decoration: none
     color: $primary
     transform: rotate(90deg)
+.title
+  font-family: "Yeseva One", sans-serif
+  font-size: 40px
+  line-height: 53px
+  text-transform: uppercase
+  &--primary
+    color: $primary

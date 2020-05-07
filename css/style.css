@@ -322,14 +322,17 @@ template {
   padding: 13px 20px;
   border: none;
   border-radius: 2px;
+  color: #FFFFFF;
   text-transform: uppercase;
   font-family: "Futura Demi", sans-serif;
   font-size: 13px;
   font-weight: 500;
   line-height: 15px; }
   .button--primary {
-    background-color: #E3B873;
-    color: #FFFFFF; }
+    background-color: #E3B873; }
+  .button--outline {
+    border: 1px solid #FFFFFF;
+    background-color: transparent; }
 
 .container {
   width: 90%;
@@ -387,8 +390,17 @@ template {
     top: 0;
     max-width: 90px;
     height: 100%; }
+  .hero__content {
+    max-width: 670px; }
   .hero__title {
     margin: 0; }
+  .hero__text {
+    font-size: 22px;
+    line-height: 30px;
+    max-width: 500px;
+    margin-bottom: 40px; }
+  .hero__button {
+    margin-right: 20px; }
   .hero__scroll-down {
     position: absolute;
     display: flex;
@@ -400,6 +412,7 @@ template {
     min-height: 97px;
     background-color: #131313;
     color: #FFFFFF;
+    font-family: "Yeseva One", sans-serif;
     font-size: 12px;
     text-transform: uppercase;
     text-decoration: none; }
@@ -414,6 +427,14 @@ template {
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg); }
+
+.title {
+  font-family: "Yeseva One", sans-serif;
+  font-size: 40px;
+  line-height: 53px;
+  text-transform: uppercase; }
+  .title--primary {
+    color: #E3B873; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
