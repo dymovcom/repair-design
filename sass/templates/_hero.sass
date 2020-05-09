@@ -47,6 +47,7 @@
     font-size: 12px
     text-transform: uppercase
     text-decoration: none
+    transition: color 0.2s
     &::after
       content: ""
       width: 29px
@@ -54,7 +55,9 @@
       border-radius: 50%
       border: 2px solid $primary
       margin-left: 12px
-      background: url("../img/arrow-down.svg") no-repeat center
+      background: url("../img/arrow-down.svg") no-repeat center  
+    &:hover
+      color: $primary
 .instagram
   display: flex
   align-items: center
@@ -68,6 +71,9 @@
     color: $primary
     transform: rotate(90deg)
     line-height: 0.8
+    transition: color 0.2s
+    &:hover
+      color: $light
     &::after
       content: ""
       width: 50px

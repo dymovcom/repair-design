@@ -338,7 +338,11 @@ template {
       box-shadow: none; }
   .button--outline {
     border: 1px solid #FFFFFF;
-    background-color: transparent; }
+    background-color: transparent;
+    transition: background-color 0.2s; }
+    .button--outline:hover {
+      background-color: #E3B873;
+      border: 1px solid #E3B873; }
 
 .section-title {
   text-align: center;
@@ -406,7 +410,10 @@ body {
   line-height: 16px; }
 
 .contacts__phone {
-  margin-right: 45px; }
+  margin-right: 45px;
+  transition: color 0.2s; }
+  .contacts__phone:hover {
+    color: #FFFFFF; }
 
 .hero {
   position: relative;
@@ -456,7 +463,8 @@ body {
     font-family: "Yeseva One", sans-serif;
     font-size: 12px;
     text-transform: uppercase;
-    text-decoration: none; }
+    text-decoration: none;
+    transition: color 0.2s; }
     .hero__scroll-down::after {
       content: "";
       width: 29px;
@@ -465,6 +473,8 @@ body {
       border: 2px solid #E3B873;
       margin-left: 12px;
       background: url("../img/arrow-down.svg") no-repeat center; }
+    .hero__scroll-down:hover {
+      color: #E3B873; }
 
 .instagram {
   display: flex;
@@ -478,7 +488,10 @@ body {
     text-decoration: none;
     color: #E3B873;
     transform: rotate(90deg);
-    line-height: 0.8; }
+    line-height: 0.8;
+    transition: color 0.2s; }
+    .instagram__link:hover {
+      color: #FFFFFF; }
     .instagram__link::after {
       content: "";
       width: 50px;
