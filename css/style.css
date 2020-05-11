@@ -529,8 +529,10 @@ body {
     margin-right: 1rem; } }
 
 @media screen and (max-width: 992px) {
-  .header__menu {
-    margin-left: 0; }
+  .header {
+    position: absolute; }
+    .header__menu {
+      margin-left: 0; }
   .nav {
     display: none; }
   .hero__instagram {
@@ -562,6 +564,8 @@ body {
     display: none; } }
 
 @media screen and (max-height: 575px) {
+  .header {
+    position: absolute; }
   .hero__scroll-down {
     display: none; } }
 
