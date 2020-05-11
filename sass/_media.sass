@@ -5,6 +5,9 @@
     &__item
       margin-right: 1rem
 @media screen and ( max-width:  992px)
+  .header
+    &__menu
+      margin-left: 0
   .nav
     display: none
   .hero
@@ -25,6 +28,7 @@
   .hero
     &__content
       max-width: 26.66rem
+      // max-width: 100%
     &__text
       font-size: 1.5rem
       line-height: 135%
@@ -32,6 +36,7 @@
     &__button
       display: block
       min-width: 26.66rem
+      // width: 100%
       margin-right: 0
       margin-bottom: 2.16rem
     &__scroll-down
@@ -40,3 +45,9 @@
   .hero
     &__scroll-down
       display: none
+@media screen and ( max-width:  400px)
+  .hero
+    &__content
+      max-width: 100%
+    &__button
+      min-width: 100%
