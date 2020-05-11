@@ -384,8 +384,6 @@ body {
   z-index: 100;
   background-color: #131313;
   padding: 24px 0; }
-  .header__menu {
-    margin-left: 4.28rem; }
 
 .menu {
   display: flex;
