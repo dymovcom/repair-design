@@ -41,3 +41,17 @@
     padding: 1.1rem 2.5rem
     background-color: $primary
     color: $light
+    box-shadow: 5px 5px 10px rgba($primary, 0.3)
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: none
+@media screen and ( max-width: 760px)
+  .types
+    &__card
+      margin-bottom: 6.58rem
+  .row
+    flex-direction: column
+    align-items: center
+  .card
+    &__text
+      margin-left: 0

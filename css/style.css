@@ -572,7 +572,20 @@ img {
   text-transform: uppercase;
   padding: 1.1rem 2.5rem;
   background-color: #E3B873;
-  color: #FFFFFF; }
+  color: #FFFFFF;
+  box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+  transition: box-shadow 0.3s; }
+  .card__pricetag:hover {
+    box-shadow: none; }
+
+@media screen and (max-width: 760px) {
+  .types__card {
+    margin-bottom: 6.58rem; }
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .card__text {
+    margin-left: 0; } }
 
 @media screen and (max-width: 1200px) {
   html {
