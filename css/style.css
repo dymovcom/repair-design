@@ -345,21 +345,23 @@ template {
       background-color: #E3B873;
       border: 1px solid #E3B873; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-size: 1.43rem;
-  font-family: "Yeseva One", cursive; }
-  .section-title__image {
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-    .section-title__image::before, .section-title__image::after {
-      content: "";
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 1.43rem;
+    font-family: "Yeseva One", cursive; }
+    .section-title__image {
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .section-title__image::before, .section-title__image::after {
+        content: "";
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
 
 .container {
   width: 90%;
@@ -375,6 +377,9 @@ html {
 body {
   font-family: "Futura Book", sans-serif;
   font-size: 1rem; }
+
+img {
+  max-width: 100%; }
 
 .header {
   position: fixed;
@@ -519,6 +524,49 @@ body {
   text-transform: uppercase; }
   .title--primary {
     color: #E3B873; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9rem;
+  padding: 1.78rem 2.14rem;
+  background-color: #FFFFFF;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
+
+.card__title {
+  font-family: "Yeseva One", sans-serif;
+  font-size: 1.28rem;
+  line-height: 1.78rem;
+  color: #363636; }
+
+.card__list {
+  padding: 0 0 0 1.1rem;
+  margin: 0 0 1.64rem 0;
+  font-size: 1.07rem;
+  line-height: 1.78rem;
+  color: #959595; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: -2rem;
+  font-family: "Yeseva One", sans-serif;
+  font-size: 1.28rem;
+  line-height: 1.78rem;
+  text-transform: uppercase;
+  padding: 1.21rem 1.5rem;
+  background-color: #E3B873;
+  color: #FFFFFF; }
 
 @media screen and (max-width: 1200px) {
   html {
