@@ -12,4 +12,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   closeButton.addEventListener("click", switchModal);
 
+  document.addEventListener("click", function(e) {
+    console.log(e.target);
+    if (e.target.classList.contains('modal')) {
+      switchModal();
+    }
+  });
+
+  document.addEventListener('keyup', function (e) {
+    console.log(e.code);
+    
+    if (e.keyCode === 27) {
+      switchModal();
+    }
+  });
+  
+  
 });

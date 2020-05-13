@@ -384,8 +384,8 @@ template {
   border-bottom: 1px solid rgba(54, 54, 54, 0.3);
   font-size: 1.285rem;
   color: #FFFFFF;
-  line-height: 1.785rem;
-  padding: 0.57rem 0; }
+  line-height: 1.7rem;
+  padding: 0.2rem 0; }
   .input::-webkit-input-placeholder {
     color: #FFFFFF; }
   .input::-moz-placeholder {
@@ -680,18 +680,19 @@ img {
     line-height: 1.857rem;
     text-align: center;
     margin-top: 0;
-    margin-bottom: 2.428rem; }
+    margin-bottom: 2rem; }
   .modal__form {
     display: flex;
     flex-direction: column; }
   .modal__input {
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1.142rem; }
+      margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.785rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 1.285rem 3.3rem; }
 
 @media screen and (max-width: 1200px) {
   html {
