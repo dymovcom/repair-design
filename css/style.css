@@ -318,6 +318,16 @@ template {
   font-style: normal;
   font-display: wrap; }
 
+#upbutton {
+  background: url(../img/arrow-circle-up-solid.svg) no-repeat top left;
+  height: 40px;
+  width: 40px;
+  bottom: 30px;
+  right: 30px;
+  cursor: pointer;
+  display: none;
+  position: fixed; }
+
 .button {
   padding: 18px 25px;
   border: none;
