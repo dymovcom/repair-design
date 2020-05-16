@@ -58,7 +58,7 @@ $(document).ready(function () {
   }); 
 
   //initialize swiper when document ready
-  var mySwiper = new Swiper ('.swiper-container', {
+  let mySwiper = new Swiper ('.swiper-container', {
     // Optional parameters
     loop: true,
     pagination: {
@@ -77,4 +77,9 @@ $(document).ready(function () {
 
   next.css('left', prev.width() + 20 + bullets.width() + 20);
   bullets.css('left', prev.width() + 20);
+
+  // document.querySelector('.slide-1').addEventListener('click', () => {
+  //   mySwiper.slideTo(3);
+  //   // console.log(mySwiper);
+  // });
 });

@@ -17,6 +17,43 @@
     &__content
       margin-left: 0
 @media screen and ( max-width: 760px)
+  .section
+    &-title
+      &__heading
+        &--primary
+        color: $primary
+        font-size: 1.83rem
+        line-height: 138%
+        margin-bottom: 1.83rem
+      &__text
+        font-size: 1.166rem
+        line-height: 158%
+        margin-bottom: 3rem
+  .project
+    &-slider
+      &__text
+        width: 100%
+        max-width: 1256 * $rem
+      &__image
+        width: 100%
+        max-width: 1256 * $rem
+    &__swiper-slide
+      margin-bottom: 30 * $rem
+  .swiper
+    &-slide
+      &__text
+        flex-basis: 50%
+      &__heading
+        font-size: 1.166rem
+      &__description
+        font-size: 1.166rem
+    &-pagination
+      margin-bottom: 2rem
+    &-button
+      &-prev, &-next
+        margin-bottom: 2rem
+  .row
+    flex-wrap: wrap
   .types
     &__card
       margin-bottom: 6.58rem
