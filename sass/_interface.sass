@@ -43,6 +43,14 @@
     text-align: center
     &--left
       text-align: left
+    &__tag
+      display: inline-block
+      font-family: "Futura Demi", sans-serif
+      font-size: 15 * $rem
+      font-weight: 500
+      line-height: 21 * $rem
+      text-transform: uppercase
+      margin-bottom: 18 * $rem
     &__heading
       text-transform: uppercase
       font-size: 1.4rem
@@ -125,3 +133,60 @@
       border-radius: 1px
       cursor: pointer
       margin-right: 0.64rem
+.swiper
+  &-slide
+    display: flex
+    flex-wrap: wrap
+    &__wrap
+      display: flex
+      flex-wrap: wrap
+      max-width: 383 * $rem
+    &__text
+      flex-basis: 38%
+      // padding-bottom: 2rem
+      margin-bottom: 38 * $rem
+    &__heading
+      color: $primary
+      font-family: "Yeseva One", cursive
+      font-size: 18 * $rem
+      line-height: 25 * $rem
+      text-transform: uppercase
+      margin-top: 0
+      margin-bottom: 0.4rem
+    &__description
+      font-size: 15 * $rem
+      line-height: 20 * $rem
+    &__image
+      text-align: right
+  &-pagination
+    &-top
+      font-family: "Yeseva One", cursive
+      font-size: 18 * $rem
+      line-height: 25 * $rem
+      text-transform: uppercase
+      margin-bottom: 22 * $rem
+    &-bullet
+      background-color: rgba($light, 0.3)
+      &-active
+        background-color: $light
+  &-button
+    &-prev, &-next, &-prev-steps, &-next-steps
+      bottom: 0
+      top: auto
+      // background-size: 42px
+      width: 42 * $rem
+      height: 14 * $rem
+      &::after
+        display: none
+    &-prev, &-prev-steps
+      left: 0
+      background: url(../img/arrow-prev.svg) no-repeat center / cover
+    &-next, &-next-steps
+      background: url(../img/arrow-next.svg) no-repeat center / cover
+.swiper-container-horizontal>.swiper-pagination-bullets
+  width: auto
+  bottom: -1px
+.swiper-container-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet
+  margin: 0 10px
+.swiper-container__steps>.swiper-button-next-steps
+  left: 250px
