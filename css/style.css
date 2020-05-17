@@ -781,55 +781,51 @@ img {
 .card__pricetag--small {
   padding: 1.1rem 5.5rem 1.1rem 2.5rem; }
 
-.steps__section-title {
-  margin-bottom: 6.57143rem; }
-
-.steps__title {
-  max-width: 18.71429rem;
-  font-family: "Yeseva One", cursive;
-  font-size: 1.07143rem;
-  line-height: 1.64286rem;
-  color: #E3B873;
-  text-transform: uppercase;
-  margin-bottom: 1.14286rem; }
-
-.steps__text {
-  max-width: 24.07143rem;
-  font-size: 1.07143rem;
-  line-height: 1.78571rem;
-  margin-bottom: 4.28571rem; }
-
-.steps__wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: flex-start; }
-
-.steps__step {
-  width: 32%;
-  margin-bottom: 2.57143rem;
-  opacity: 0.3; }
-  .steps__step:hover {
-    cursor: pointer;
-    opacity: 0.5; }
-  .steps__step--active {
-    opacity: 1; }
-    .steps__step--active:hover {
+.steps {
+  background: #131313 url(../img/bg-lines.svg) no-repeat center/cover; }
+  .steps__section-title {
+    margin-bottom: 6.57143rem; }
+  .steps__title {
+    max-width: 18.71429rem;
+    font-family: "Yeseva One", cursive;
+    font-size: 1.07143rem;
+    line-height: 1.64286rem;
+    color: #E3B873;
+    text-transform: uppercase;
+    margin-bottom: 1.14286rem; }
+  .steps__text {
+    max-width: 24.07143rem;
+    font-size: 1.07143rem;
+    line-height: 1.78571rem;
+    margin-bottom: 4.28571rem; }
+  .steps__wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start; }
+  .steps__step {
+    width: 32%;
+    margin-bottom: 2.57143rem;
+    opacity: 0.3; }
+    .steps__step:hover {
+      cursor: pointer;
+      opacity: 0.5; }
+    .steps__step--active {
       opacity: 1; }
-
-.steps__number {
-  display: inline-block;
-  font-family: "Yeseva One", cursive;
-  font-size: 1.07143rem;
-  line-height: 1.5rem;
-  border-bottom: 1px solid #E3B873;
-  margin-bottom: 0.85714rem; }
-
-.steps__name {
-  display: block;
-  font-size: 1.07143rem;
-  line-height: 1.28571rem;
-  max-width: 9.71429rem; }
+      .steps__step--active:hover {
+        opacity: 1; }
+  .steps__number {
+    display: inline-block;
+    font-family: "Yeseva One", cursive;
+    font-size: 1.07143rem;
+    line-height: 1.5rem;
+    border-bottom: 1px solid #E3B873;
+    margin-bottom: 0.85714rem; }
+  .steps__name {
+    display: block;
+    font-size: 1.07143rem;
+    line-height: 1.28571rem;
+    max-width: 9.71429rem; }
 
 .modal {
   opacity: 0;
