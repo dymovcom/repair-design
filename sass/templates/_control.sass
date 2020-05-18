@@ -1,0 +1,62 @@
+.control
+  margin: auto
+  &__section-title
+    margin-top: -28.6rem
+    margin-bottom: rem(31px)
+  &__video
+    position: relative
+    display: flex
+    max-width: rem(817px)
+    min-height: rem(434px)
+    background: $dark url('../img/video.jpg') center no-repeat
+    box-shadow: 0px 20px 50px rgba($dark, 0.15)
+    margin: auto
+    margin-bottom: rem(60px)
+    &::before
+      position: absolute
+      content: ''
+      width: 100%
+      height: 100%
+      background-color: rgba($dark, 0.8)
+  &__text
+    max-width: rem(570px)
+    font-size: rem(20px)
+    line-height: rem(34px)
+    text-align: center
+    margin: auto
+    margin-bottom: rem(60px)
+    &::before
+      content: ''
+      display: block
+      width: 55px
+      height: 2px
+      background-color: $primary
+      border-radius: 30px
+      margin: auto
+      margin-bottom: rem(27px)
+  &__form
+    display: flex
+    justify-content: space-between
+    flex-wrap: wrap
+    max-width: rem(769px)
+    margin: auto
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 30%
+  &__label
+    margin-bottom: -1px
+  &__button
+    padding: rem(19px) rem(64px)
+  &__policy
+    margin-top: rem(15px)
+    flex-basis: 100%
+    &-label
+      justify-content: center
+.video
+  &__play
+    position: relative
+    border-radius: 50%
+    margin: auto
+    &:hover
+      cursor: pointer

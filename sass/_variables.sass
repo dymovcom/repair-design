@@ -1,6 +1,10 @@
+$font-size: 14px
 $dark: #131313
 $primary: #E3B873
 $light: #FFFFFF
 $text: #363636
 $secondary: #959595
 $rem: 0.0714285714285714rem
+
+@function rem($size)
+  @return $size / $font-size * 1rem
