@@ -186,4 +186,20 @@ $(document).ready(function () {
     document.querySelector('.steps__step--6').classList.toggle("steps__step--active");
   });
   
+
+
+  // инициализация WOW.js
+  new WOW().init();
+
+  // своя анимация
+  $(window).scroll(function() {
+    $('.myAnimate').each(function() {
+      var elPos = $(this).offset().top;
+      var topOfWindow = $(window).scrollTop();
+      if (elPos < topOfWindow + $(window).height()) {
+        $(this).addClass('myFadeInUp');
+      }
+    });
+  });
+
 });
