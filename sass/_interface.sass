@@ -98,6 +98,62 @@
       margin: 1.3rem auto 0 auto
       &--light
         color: $light
+.card
+  &__text
+    position: relative
+    max-width: 23.54rem
+    margin: 0 auto
+    margin-top: -9.3rem
+    padding: 1.55rem 2.14rem
+    background-color: $light
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
+  &__title
+    font-family: "Yeseva One", sans-serif
+    font-size: 1.28rem
+    line-height: 1.78rem
+    color: $text
+    margin-top: 0
+    margin-bottom: 0.4rem
+    &-tag
+      display: block
+      font-size: rem(18px)
+      line-height: rem(26px)
+      color: $secondary
+      text-align: center
+      margin-bottom: rem(20px)
+  &__list
+    padding: 0 0 0 1.1rem
+    margin: 0 0 2.4rem 0
+    font-size: 1.07rem
+    line-height: 1.88rem
+    color: $secondary
+  &__pricetag
+    position: absolute
+    left: 0
+    bottom: 0
+    margin-bottom: -2rem
+    font-family: "Yeseva One", sans-serif
+    font-size: 1.28rem
+    line-height: 1.78rem
+    text-transform: uppercase
+    padding: 1.1rem 2.5rem
+    background-color: $primary
+    color: $light
+    box-shadow: 5px 5px 10px rgba($primary, 0.3)
+    transition: box-shadow 0.3s
+    &:hover
+      box-shadow: none
+  &__stick
+    position: absolute
+    top: -35px
+    left: -35px
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 70px
+    height: 70px
+    background-color: $primary
+    box-shadow: 0px 5px 20px rgba($primary, 0.5)
 .label
   font-size: 1.07rem
   line-height: 1.428rem
@@ -200,3 +256,11 @@
   margin: 0 10px
 .swiper-container__steps>.swiper-button-next-steps
   left: 250px
+
+input.invalid
+  border-bottom: 1px solid tomato
+.invalid
+  color: tomato
+div.invalid
+  position: absolute
+  bottom: -15px

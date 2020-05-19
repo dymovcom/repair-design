@@ -202,4 +202,84 @@ $(document).ready(function () {
     });
   });
 
+  $('.modal__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      // compound rule
+      userEmail: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не меньше {0} символов"),
+        maxlength: jQuery.validator.format("Не больше {0} символов")
+      },
+      userPhone: "Заполните поле",
+      userEmail: {
+        required: "Заполните поле",
+        email: "Введите корректный email"
+      }
+    }
+  });
+
+  $('.control__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не меньше {0} символов"),
+        maxlength: jQuery.validator.format("Не больше {0} символов")
+      },
+      userPhone: "Заполните поле"
+    }
+  });
+
+  $('.footer__form').validate({
+    errorClass: "invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userPhone: "required",
+      userQuestion: "required"
+    },
+    messages: {
+      userName: {
+        required: "Заполните поле",
+        minlength: jQuery.validator.format("Не меньше {0} символов"),
+        maxlength: jQuery.validator.format("Не больше {0} символов")
+      },
+      userPhone: "Заполните поле",
+      userQuestion: "Заполните поле"
+    }
+  });
+
+
+  $('[type=tel').mask('+7 (000) 000-00-00');
+
 });
