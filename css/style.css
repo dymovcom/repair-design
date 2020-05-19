@@ -468,6 +468,8 @@ template {
     border-radius: 1px;
     cursor: pointer;
     margin-right: 0.64rem; }
+  .policy__label--center {
+    justify-content: center; }
 
 .swiper-slide {
   display: flex;
@@ -856,7 +858,8 @@ img {
   padding: 1.1rem 5.5rem 1.1rem 2.5rem; }
 
 .steps {
-  background: #131313 url(../img/bg-lines.svg) no-repeat center/cover; }
+  background: #131313 url(../img/bg-lines.svg) no-repeat center/cover;
+  padding-bottom: 30rem; }
   .steps__section-title {
     margin-bottom: 6.57143rem; }
   .steps__title {
@@ -900,6 +903,55 @@ img {
     font-size: 1.07143rem;
     line-height: 1.28571rem;
     max-width: 9.71429rem; }
+
+.team {
+  padding-bottom: 30rem; }
+  .team__section-title {
+    margin-top: -30rem; }
+
+.footer {
+  background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
+  padding: 2rem 0; }
+  .footer__wrap {
+    background: #181818 url("../img/bg-lines.svg") no-repeat center/cover;
+    max-width: 63.07143rem;
+    margin: auto;
+    margin-top: -20rem;
+    margin-bottom: 3.71429rem;
+    padding: 2.42857rem; }
+  .footer__title {
+    font-family: "Yeseva One", sans-serif;
+    font-size: 1.42857rem;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-bottom: 3.21429rem; }
+  .footer__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 37.14286rem;
+    margin: auto; }
+  .footer__input {
+    padding: 0; }
+    .footer__input-group {
+      display: flex;
+      flex-direction: column;
+      flex-basis: 45%;
+      margin-bottom: 3.42857rem; }
+      .footer__input-group--full-widht {
+        flex-basis: 100%;
+        margin-bottom: 2.28571rem; }
+  .footer__policy {
+    flex-basis: 100%;
+    margin-bottom: 3.57143rem; }
+  .footer__button {
+    padding: 1.35714rem 4.64286rem;
+    margin: auto; }
+  .footer__menu {
+    background-color: #131313;
+    padding: 3.35714rem 0; }
 
 .modal {
   opacity: 0;
@@ -1077,7 +1129,15 @@ img {
     .control__policy {
       margin-bottom: 4.42857rem; }
       .control__policy-label {
-        color: #FFFFFF; } }
+        color: #FFFFFF; }
+  .footer {
+    background: #131313; }
+    .footer__wrap {
+      background: #131313;
+      padding: 0;
+      margin-top: 0; }
+    .footer__input-group {
+      flex-basis: 100%; } }
 
 @media screen and (max-height: 575px) {
   .header {
@@ -1099,7 +1159,11 @@ img {
       margin-bottom: -4rem; }
   .video__play {
     width: 65px;
-    height: 65px; } }
+    height: 65px; }
+  .footer__button {
+    flex-basis: 100%; }
+  .footer__menu {
+    display: none; } }
 
 @-webkit-keyframes myFadeInUp {
   0% {
