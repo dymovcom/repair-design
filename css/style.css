@@ -1077,7 +1077,11 @@ img {
   .hero__content {
     margin-left: 0; }
   .steps {
-    display: none; } }
+    display: none; }
+  .team {
+    background: #131313; }
+    .team__section-title {
+      margin-top: 0; } }
 
 @media screen and (max-width: 760px) {
   .section-title__heading {
