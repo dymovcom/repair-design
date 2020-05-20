@@ -608,7 +608,7 @@ div.invalid {
   position: absolute;
   bottom: -15px; }
 
-.footer__policy .invalid {
+.footer__policy .invalid, .control__policy .invalid {
   left: 50%;
   margin-left: -76px; }
 
