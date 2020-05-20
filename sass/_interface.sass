@@ -173,13 +173,14 @@
     &::placeholder
       color: $light
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
     &:checked +
       .policy__label
         &::before
-          img\check.svg
+          // img\check.svg
           background: $primary url("../img/check.svg") no-repeat center / 1rem
   &__label
     display: flex
@@ -264,3 +265,6 @@ input.invalid
 div.invalid
   position: absolute
   bottom: -15px
+.footer__policy .invalid
+  left: 50%
+  margin-left: -76px

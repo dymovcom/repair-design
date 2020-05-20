@@ -217,7 +217,8 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }
+      },
+      policyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -229,7 +230,8 @@ $(document).ready(function () {
       userEmail: {
         required: "Заполните поле",
         email: "Введите корректный email"
-      }
+      },
+      policyCheckbox: "Подтвердите соглашение"
     }
   });
 
@@ -243,7 +245,8 @@ $(document).ready(function () {
         minlength: 2,
         maxlength: 15
       },
-      userPhone: "required"
+      userPhone: "required",
+      policyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -251,7 +254,8 @@ $(document).ready(function () {
         minlength: jQuery.validator.format("Не меньше {0} символов"),
         maxlength: jQuery.validator.format("Не больше {0} символов")
       },
-      userPhone: "Заполните поле"
+      userPhone: "Заполните поле",
+      policyCheckbox: "Подтвердите соглашение"
     }
   });
 
@@ -266,7 +270,8 @@ $(document).ready(function () {
         maxlength: 15
       },
       userPhone: "required",
-      userQuestion: "required"
+      userQuestion: "required",
+      policyCheckbox: "required"
     },
     messages: {
       userName: {
@@ -275,7 +280,8 @@ $(document).ready(function () {
         maxlength: jQuery.validator.format("Не больше {0} символов")
       },
       userPhone: "Заполните поле",
-      userQuestion: "Заполните поле"
+      userQuestion: "Заполните поле",
+      policyCheckbox: "Подтвердите соглашение"
     }
   });
 
