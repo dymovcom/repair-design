@@ -380,12 +380,16 @@ template {
       font-size: 1.4rem;
       line-height: 1.75rem;
       font-family: "Yeseva One", cursive; }
-      .section-title__heading--primary {
+      .section-title__heading--big {
         color: #E3B873;
         font-size: 1.92857rem;
         line-height: 2.64286rem;
         letter-spacing: -0.07em;
         margin-top: 0; }
+      .section-title__heading--primary {
+        color: #E3B873;
+        font-size: 1.42rem;
+        line-height: 1.85rem; }
     .section-title__word {
       display: flex;
       align-items: center; }
@@ -964,7 +968,7 @@ img {
 
 .footer {
   background: #131313 url("../img/footer-bg.jpg") no-repeat center/cover;
-  padding: 2rem 0; }
+  padding-top: 2rem; }
   .footer__wrap {
     background: #181818 url("../img/bg-lines.svg") no-repeat center/cover;
     max-width: 63.07143rem;
@@ -972,6 +976,10 @@ img {
     margin-top: -20rem;
     margin-bottom: 3.71429rem;
     padding: 2.42857rem; }
+  .footer__contacts {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
   .footer__title {
     font-family: "Yeseva One", sans-serif;
     font-size: 1.42857rem;
@@ -1003,6 +1011,21 @@ img {
   .footer__button {
     padding: 1.35714rem 4.64286rem;
     margin: auto; }
+  .footer__section-title {
+    max-width: 36.78571rem;
+    margin: auto;
+    margin-bottom: 1.85714rem; }
+  .footer__social {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3.07143rem; }
+  .footer__link {
+    margin: 0 7px; }
+  .footer__map {
+    width: 100%;
+    max-width: 66.07143rem;
+    height: 33.21429rem;
+    margin-bottom: 4.71429rem; }
   .footer__menu {
     background-color: #131313;
     padding: 3.35714rem 0; }
@@ -1108,6 +1131,8 @@ img {
     font-size: 1.83rem;
     line-height: 138%;
     margin-bottom: 1.83rem; }
+  .section-title__phone {
+    display: block; }
   .section-title__text {
     font-size: 1.166rem;
     line-height: 158%;
@@ -1153,6 +1178,9 @@ img {
         text-align: center; } }
 
 @media screen and (max-width: 570px) {
+  .section-title__heading--primary {
+    font-size: 1.28571rem;
+    line-height: 138%; }
   .contacts__phone {
     color: #FFFFFF;
     text-decoration: none;
@@ -1216,7 +1244,10 @@ img {
       padding: 0;
       margin-top: 0; }
     .footer__input-group {
-      flex-basis: 100%; } }
+      flex-basis: 100%; }
+    .footer__map {
+      max-width: 100%;
+      height: 18.21429rem; } }
 
 @media screen and (max-height: 575px) {
   .header {
@@ -1243,6 +1274,8 @@ img {
     flex-basis: 100%; }
   .footer__menu {
     display: none; }
+  .footer__map {
+    order: -1; }
   .row--evenly {
     align-items: flex-end; } }
 

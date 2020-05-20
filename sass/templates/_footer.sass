@@ -1,6 +1,7 @@
 .footer
   background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
-  padding: 2rem 0
+  // padding: 2rem 0
+  padding-top: 2rem
   &__wrap
     background: $black url('../img/bg-lines.svg') no-repeat center / cover
     max-width: rem(883px)
@@ -8,6 +9,10 @@
     margin-top: -20rem
     margin-bottom: rem(52px)
     padding: rem(34px)
+  &__contacts
+    display: flex
+    flex-direction: column
+    align-items: center
   &__title
     font-family: "Yeseva One", sans-serif
     font-size: rem(20px)
@@ -39,6 +44,22 @@
   &__button
     padding: rem(19px) rem(65px)
     margin: auto
+  &__section-title
+    max-width: rem(515px)
+    margin: auto
+    margin-bottom: rem(26px)
+  &__social
+    display: flex
+    justify-content: center
+    margin-bottom: rem(43px)
+  &__link
+    margin: 0 7px
+  &__map
+    width: 100%
+    max-width: rem(925px)
+    height: rem(465px)
+    // margin: auto
+    margin-bottom: rem(66px)
   &__menu
     background-color: $dark
     padding: rem(47px) 0

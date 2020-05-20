@@ -49,6 +49,8 @@
         font-size: 1.83rem
         line-height: 138%
         margin-bottom: 1.83rem
+      &__phone
+        display: block
       &__text
         font-size: 1.166rem
         line-height: 158%
@@ -102,8 +104,13 @@
         margin-right: auto
       &__title
         text-align: center
-  
 @media screen and ( max-width:  570px)
+  .section
+    &-title
+      &__heading
+        &--primary
+          font-size: rem(18px)
+          line-height: 138%
   .contacts
     &__phone
       color: $light
@@ -163,6 +170,9 @@
     &__input
       &-group
         flex-basis: 100%
+    &__map
+      max-width: 100%
+      height: rem(255px)
 @media screen and ( max-height:  575px)
   .header
     position: absolute
@@ -191,6 +201,8 @@
       flex-basis: 100%
     &__menu
       display: none
+    &__map
+      order: -1
   .row
     &--evenly
       align-items: flex-end
