@@ -515,6 +515,7 @@ template {
     opacity: 0;
     visibility: hidden; }
     .policy__checkbox:checked + .policy__label::before {
+      content: "";
       background: #E3B873 url("../img/check.svg") no-repeat center/1rem; }
   .policy__label {
     display: flex;
@@ -1086,9 +1087,22 @@ img {
   .team {
     background: #131313; }
     .team__section-title {
-      margin-top: 0; } }
+      margin-top: 0; }
+  .row--evenly {
+    justify-content: space-between; }
+  .col-22 {
+    flex-basis: 25%; } }
 
-@media screen and (max-width: 760px) {
+@media screen and (max-width: 768px) {
+  .col-22 {
+    flex-basis: 100%; }
+  .row {
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap; }
+  .card__text {
+    max-width: 22rem;
+    margin-left: 0; }
   .section-title__heading {
     color: #E3B873;
     font-size: 1.83rem;
@@ -1122,18 +1136,21 @@ img {
     margin-bottom: 2rem; }
   .swiper-button-prev, .swiper-button-next {
     margin-bottom: 2rem; }
-  .row {
-    flex-wrap: wrap; }
   .types__card {
     margin-bottom: 6.58rem; }
   .design__card {
     margin-bottom: 6.58rem; }
-  .row {
-    flex-direction: column;
-    align-items: center; }
-  .card__text {
-    max-width: 22rem;
-    margin-left: 0; } }
+  .team {
+    padding-bottom: 17rem; }
+    .team__card {
+      margin-bottom: 7.85714rem; }
+      .team__card__text {
+        padding: 1.4rem 0;
+        max-width: 16.64286rem;
+        margin-left: auto;
+        margin-right: auto; }
+      .team__card__title {
+        text-align: center; } }
 
 @media screen and (max-width: 570px) {
   .contacts__phone {
@@ -1190,6 +1207,8 @@ img {
       margin-bottom: 4.42857rem; }
       .control__policy-label {
         color: #FFFFFF; }
+  .team {
+    padding-bottom: 0; }
   .footer {
     background: #131313; }
     .footer__wrap {
@@ -1223,7 +1242,9 @@ img {
   .footer__button {
     flex-basis: 100%; }
   .footer__menu {
-    display: none; } }
+    display: none; }
+  .row--evenly {
+    align-items: flex-end; } }
 
 @-webkit-keyframes myFadeInUp {
   0% {

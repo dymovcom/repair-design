@@ -23,7 +23,24 @@
     background: $dark
     &__section-title
       margin-top: 0
-@media screen and ( max-width: 760px)
+  .row
+    &--evenly
+      justify-content: space-between
+  .col
+    &-22
+      flex-basis: 25%
+@media screen and ( max-width: 768px)
+  .col
+    &-22
+      flex-basis: 100%
+  .row
+    flex-direction: column
+    align-items: center
+    flex-wrap: wrap
+  .card
+    &__text
+      max-width: 22rem
+      margin-left: 0
   .section
     &-title
       &__heading
@@ -55,7 +72,6 @@
     &__play
       width: 100px
       height: 100px
-  
   .swiper
     &-slide
       &__text
@@ -69,21 +85,24 @@
     &-button
       &-prev, &-next
         margin-bottom: 2rem
-  .row
-    flex-wrap: wrap
   .types
     &__card
       margin-bottom: 6.58rem
   .design
     &__card
       margin-bottom: 6.58rem
-  .row
-    flex-direction: column
-    align-items: center
-  .card
-    &__text
-      max-width: 22rem
-      margin-left: 0
+  .team
+    padding-bottom: 17rem
+    &__card
+      margin-bottom: rem(110px)
+      &__text
+        padding: 1.4rem 0
+        max-width: rem(233px)
+        margin-left: auto
+        margin-right: auto
+      &__title
+        text-align: center
+  
 @media screen and ( max-width:  570px)
   .contacts
     &__phone
@@ -133,6 +152,8 @@
       margin-bottom: rem(62px)
       &-label
         color: $light
+  .team
+    padding-bottom: 0
   .footer
     background: $dark
     &__wrap
@@ -170,3 +191,6 @@
       flex-basis: 100%
     &__menu
       display: none
+  .row
+    &--evenly
+      align-items: flex-end
