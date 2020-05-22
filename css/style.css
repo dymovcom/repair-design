@@ -1075,6 +1075,8 @@ img {
   .modal__form {
     display: flex;
     flex-direction: column; }
+    .modal__form--close {
+      display: none; }
   .modal__input-group {
     position: relative;
     display: flex;

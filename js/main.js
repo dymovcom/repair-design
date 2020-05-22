@@ -26,24 +26,34 @@
 
 $(document).ready(function () {
   
-  var modal       = $('.modal'),
+  var modal       = $('.modal-primary'),
       modalButton = $('[data-toggle=modal]'),
       closeButton = $('.modal__close');
 
   modalButton.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.addClass('modal--visible');
   });
   closeButton.on('click', function () {
-    modal.toggleClass('modal--visible');
+    modal.removeClass('modal--visible');
+    $('.modal__form').removeClass('modal__form--close');
+    $('.modal-primary__title').html('Оставьте заявку и наш менеджер свяжется с вами ');
+    $('.modal-thanks').removeClass('modal--visible');
   });
   $(document).click(function (e) {
-    if ($(e.target).is('.modal')) {
-      modal.toggleClass('modal--visible');
+    if ($(e.target).is('.modal-primary') || $(e.target).is('.modal-thanks')) {
+      modal.removeClass('modal--visible');
+      $('.modal__form').removeClass('modal__form--close');
+      $('.modal-primary__title').html('Оставьте заявку и наш менеджер свяжется с вами ');
+      $('.modal-thanks').removeClass('modal--visible');
     }
   });
   $(document).on('keydown', function(e) {
-    if (e.keyCode === 27 && modal.hasClass('modal--visible'))
-      modal.toggleClass('modal--visible');
+    if (e.keyCode === 27 && (modal.hasClass('modal--visible') || $('.modal-thanks').hasClass('modal--visible'))) {
+      modal.removeClass('modal--visible');
+      $('.modal__form').removeClass('modal__form--close');
+      $('.modal-primary__title').html('Оставьте заявку и наш менеджер свяжется с вами ');
+      $('.modal-thanks').removeClass('modal--visible');
+    }
   });
 
   $(window).scroll(function() {
@@ -231,6 +241,19 @@ $(document).ready(function () {
         email: "Введите корректный email"
       },
       policyCheckbox: "Подтвердите соглашение"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          $('.modal__form').addClass('modal__form--close');
+          $('.modal-primary__title').html('Спасбо за заявку! Наш менеджер свяжется с вами не позднее 15 минут!<br>А пока можете подписаться на нашу <a href="https://vk.com/dymovcom" class="lesson-link" target="_blank">группу</a> в Вконтакте!');
+        }
+      });
     }
   });
 
@@ -255,6 +278,18 @@ $(document).ready(function () {
       },
       userPhone: "Заполните поле",
       policyCheckbox: "Подтвердите соглашение"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          $('.modal-thanks').addClass('modal--visible');
+        }
+      });
     }
   });
 
@@ -281,6 +316,18 @@ $(document).ready(function () {
       userPhone: "Заполните поле",
       userQuestion: "Заполните поле",
       policyCheckbox: "Подтвердите соглашение"
+    },
+    submitHandler: function(form) {
+      $.ajax({
+        type: "POST",
+        url: "send.php",
+        data: $(form).serialize(),
+        success: function (response) {
+          // console.log('Ajax сработал. Ответ сервера: ' + response);
+          $(form)[0].reset();
+          $('.modal-thanks').addClass('modal--visible');
+        }
+      });
     }
   });
 
