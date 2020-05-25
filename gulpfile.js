@@ -44,7 +44,7 @@ function buildJS(done) {
   src('js/**/**.js')
   .pipe(minify({
     ext:{
-        min:'.js'
+        min:'.min.js'
     },
     // exclude: ['tasks'],
     ignoreFiles: ['*min.js']
@@ -74,14 +74,14 @@ function fonts(done) {
   done();
 }
 
-function imagemin(done) {
-  src('img/**/*.{png,jpg,jpeg}')
-    .pipe(tinypng({key: 'psTnYvCNQyLSyXZ4J84MlBnQk204XKYc'}))
-    .pipe(dest('dist/img/'));
-  src('img/**/*.svg')
-    .pipe(dest('dist/img/'));  
-  done();
-}
+// function imagemin(done) {
+//   src('img/**/*.{png,jpg,jpeg}')
+//     .pipe(tinypng({key: 'psTnYvCNQyLSyXZ4J84MlBnQk204XKYc'}))
+//     .pipe(dest('dist/img/'));
+//   src('img/**/*.svg')
+//     .pipe(dest('dist/img/'));  
+//   done();
+// }
 
 exports.serve = bs;
-exports.build = series(buildCSS, buildJS, htmlMin, php, fonts, imagemin);
+exports.build = series(buildCSS, buildJS, htmlMin, php, fonts);

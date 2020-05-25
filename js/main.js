@@ -174,17 +174,6 @@ $(document).ready(function () {
   // инициализация WOW.js
   new WOW().init();
 
-  // своя анимация
-  $(window).scroll(function() {
-    $('.myAnimate').each(function() {
-      var elPos = $(this).offset().top;
-      var topOfWindow = $(window).scrollTop();
-      if (elPos < topOfWindow + $(window).height()) {
-        $(this).addClass('myFadeInUp');
-      }
-    });
-  });
-
   $('.modal__form').validate({
     errorClass: "invalid",
     errorElement: "div",

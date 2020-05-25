@@ -309,14 +309,14 @@ template {
   src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 @font-face {
   font-family: 'Futura Demi';
   src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
   font-weight: normal;
   font-style: normal;
-  font-display: wrap; }
+  font-display: swap; }
 
 #upbutton {
   background: url(../img/arrow-circle-up-solid.svg) no-repeat top left;
@@ -1280,23 +1280,3 @@ img {
     order: -1; }
   .row--evenly {
     align-items: flex-end; } }
-
-@-webkit-keyframes myFadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0); }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-@keyframes myFadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0); }
-  100% {
-    opacity: 1;
-    transform: translate3d(0, 0, 0); } }
-
-.myFadeInUp {
-  -webkit-animation: myFadeInUp 1s;
-  animation: myFadeInUp 1s; }
