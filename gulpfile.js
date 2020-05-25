@@ -43,8 +43,9 @@ function buildCSS(done) {
 function buildJS(done) {
   src('js/**/**.js')
   .pipe(minify({
+    noSource: true,
     ext:{
-        min:'.min.js'
+        min:'.js'
     },
     // exclude: ['tasks'],
     ignoreFiles: ['*min.js']

@@ -53,11 +53,11 @@ try {
     $mail->Body = $massage; //Текст нащего сообщения можно использовать HTML теги
 
     if ($mail->send()) {
-        echo "ok";
+        // echo "ok";
+        header('Location: thanks.html');
     } else {
         echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
     }
-    // header('Location: thanks.html');
 } catch (Exception $e) {
     echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }

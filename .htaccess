@@ -1,0 +1,10 @@
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 month"
+
+    ExpiresByType image/png "access plus 12 months"
+    ExpiresByType image/webp "access plus 12 months"
+    ExpiresByType image/svg "access plus 12 months"
+    ExpiresByType image/jpeg "access plus 12 months"
+    ExpiresByType image/jpg "access plus 12 months"
+</IfModule>
