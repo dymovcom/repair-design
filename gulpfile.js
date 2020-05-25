@@ -30,6 +30,13 @@ function serveSass() {
     .pipe(browserSync.stream());
 };
 
+function buildCSS(done) {
+  src('css/**/**.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest("dist/css/"));
+  done();
+}
+
 function mincss() {
   return src("css/*.css")
     .pipe(rename({suffix: ".min"}))
