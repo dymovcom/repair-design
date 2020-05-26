@@ -4,9 +4,11 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Repair Design</title>
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
   <link href="https://fonts.googleapis.com/css?family=Yeseva+One&display=swap&subset=cyrillic" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
-  <link rel="stylesheet" href="css//animate.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -15,14 +17,14 @@
   <header class="header">
     <div class="container">
       <div class="menu header__menu">
-        <div class="logo menu__logo">Repair Design Project</div>
+        <a href="index.html" class="logo menu__logo">Repair Design Project</a>
         <nav class="nav menu__nav">
-          <a href="index.html" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
-          <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
+          <a href="#hero" class="nav__item">Главная</a>
+          <a href="#project" class="nav__item">Проекты</a>
+          <!-- <a href="#" class="nav__item">Замер</a> -->
+          <!-- <a href="#" class="nav__item">Команда</a> -->
+          <!-- <a href="#" class="nav__item">Отзывы</a> -->
+          <a href="#footer__contacts" class="nav__item">Контакты</a>
         </nav>
         <div class="contacts menu__contacts">
           <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -37,9 +39,9 @@
   <!-- /.header -->
 
   <main>
-    <div class="hero">
+    <div class="hero" id="hero">
       <div class="instagram hero__instagram">
-        <a href="#" class="instagram__link">INSTAGRAM</a>
+        <a href="https://www.instagram.com/dymovweb/" class="instagram__link">INSTAGRAM</a>
       </div>
       <!-- /.instagram -->
       <div class="container">
@@ -52,11 +54,11 @@
         <!-- /.hero__content -->
       </div>
       <!-- /.container -->
-      <a href="#" class="hero__scroll-down wow bounce" data-wow-delay="2s" data-wow-iteration="2">листайте вниз</a>
+      <a href="#footer" class="hero__scroll-down wow bounce" data-wow-delay="2s" data-wow-iteration="2">листайте вниз</a>
     </div>
     <!-- /.hero -->
 
-    <section class="section section--dark project">
+    <section class="section section--dark project" id="project">
       <div class="container">
         <div class="row">
           <div class="project-slider__text">
@@ -201,7 +203,8 @@
         </div>
         <!-- /.section-title -->
         <div class="video control__video wow fadeIn">
-          <img src="img/play-icon.svg" alt="play" class="video__play">
+          <a class="video__play" data-fancybox href="https://www.youtube.com/watch?v=Y8Q9ptCXzL0&t=17s"><img src="img/play-icon.svg" alt="play"></a>
+          <!-- <img src="img/play-icon.svg" alt="play" class="video__play"> -->
         </div>
         <!-- /.video control__video -->
         <p class="control__text">
@@ -484,7 +487,7 @@
   
   <footer class="footer section--dark">
     <div class="container">
-      <div class="footer__wrap">
+      <div class="footer__wrap" id="footer">
         <h3 class="footer__title">Остались вопросы?</h3>
         <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
@@ -511,6 +514,7 @@
         </form>
       </div>
       <!-- /.footer__wrap -->
+      <div id="footer__contacts"></div>
       <div class="footer__contacts">
         <div class="section-title footer__section-title">
           <h2 class="section-title__heading section-title__heading--primary">Ростов на дону, Торговый центр Plaza
@@ -519,7 +523,7 @@
         </div>
         <!-- /.section-title -->
         <div class="footer__social">
-          <a href="#" class="footer__link"><img src="img/mail-icon.svg" alt="mail" class="footer__link-img"></a>
+          <a href="mailto:dymovcom@yandex.ru" class="footer__link"><img src="img/mail-icon.svg" alt="mail" class="footer__link-img"></a>
           <a href="#" class="footer__link"><img src="img/instagram-icon.svg" alt="instagram" class="footer__link-img"></a>
         </div>
         <!-- /.footer__links -->
@@ -534,14 +538,14 @@
     <div class="footer__menu">
       <div class="container">
         <div class="menu">
-          <div class="logo menu__logo">Repair Design Project</div>
+          <a href="index.html" class="logo menu__logo">Repair Design Project</a>
           <nav class="nav menu__nav">
-            <a href="#" class="nav__item">Главная</a>
-            <a href="#" class="nav__item">Проекты</a>
-            <a href="#" class="nav__item">Замер</a>
-            <a href="#" class="nav__item">Команда</a>
-            <a href="#" class="nav__item">Отзывы</a>
-            <a href="#" class="nav__item">Контакты</a>
+            <a href="#hero" class="nav__item">Главная</a>
+            <a href="#project" class="nav__item">Проекты</a>
+            <!-- <a href="#" class="nav__item">Замер</a> -->
+            <!-- <a href="#" class="nav__item">Команда</a> -->
+            <!-- <a href="#" class="nav__item">Отзывы</a> -->
+            <a href="#footer__contacts" class="nav__item">Контакты</a>
           </nav>
           <div class="contacts menu__contacts">
             <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
@@ -594,6 +598,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
   <!-- <script src="js/jquery.lazy.min.js"></script> -->
   <!-- <script src="https://api-maps.yandex.ru/2.1/?load=package.map&apikey=4d06fd11-2e89-4683-b283-c394a20d9ddc&lang=ru_RU"></script> -->
   <script src="js/main.js"></script>
