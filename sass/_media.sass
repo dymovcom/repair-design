@@ -196,7 +196,7 @@
         padding: 1.35rem 2.44rem 2.15rem 2.44rem
       &__list
         overflow-x: hidden
-        max-height: rem(181px)
+        max-height: rem(183px)
         text-overflow: ellipsis
   .footer
     background: $dark
@@ -231,6 +231,20 @@
   .hero
     &__scroll-down
       display: none
+    &::after
+      display: none
+  .modal
+    overflow-y: scroll
+    &__dialog
+      padding: 1.2rem 3rem 1.2rem 3rem
+    &__title
+      margin-bottom: 1rem
+    &__input-group
+      margin-bottom: 1.5rem
+    &__policy
+      margin-bottom: 1.5rem
+    &__button
+      padding: 1rem 2.3rem
 @media screen and ( max-width:  400px)
   .section
     &-title
