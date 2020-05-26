@@ -55,7 +55,7 @@ $(document).ready(function () {
   
 
   // инициализация WOW.js
-  // new WOW().init();
+  new WOW().init();
 
   // валидация форм
   $('.modal__form').validate({
