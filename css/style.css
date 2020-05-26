@@ -648,7 +648,8 @@ div.invalid {
   width: 60%; }
 
 *, *:before, *:after {
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  outline: none; }
 
 html {
   font-size: 14px; }
@@ -1034,7 +1035,9 @@ img {
   html {
     font-size: 12px; }
   .nav__item {
-    margin-right: 1rem; }
+    margin-right: 1rem; } }
+
+@media screen and (max-width: 991px) {
   .nav__item:hover {
     color: #FFFFFF; }
   .contacts__phone:hover {
@@ -1051,9 +1054,7 @@ img {
     border: 1px solid #FFFFFF;
     background-color: transparent; }
   .card__pricetag:hover {
-    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); } }
-
-@media screen and (max-width: 991px) {
+    box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3); }
   .header {
     position: absolute; }
     .header__menu {
