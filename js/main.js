@@ -55,7 +55,7 @@ $(document).ready(function () {
   
 
   // инициализация WOW.js
-  new WOW().init();
+  // new WOW().init();
 
   // валидация форм
   $('.modal__form').validate({
@@ -181,45 +181,80 @@ $(document).ready(function () {
 
   $('[type=tel').mask('+7 (000) 000-00-00');
 
+
+
+  function loadScript(url, callback){
+
+    var script = document.createElement("script");
+  
+    if (script.readyState){  //IE
+      script.onreadystatechange = function(){
+        if (script.readyState == "loaded" ||
+                script.readyState == "complete"){
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {  //Другие браузеры
+      script.onload = function(){
+        callback();
+      };
+    }
+  
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
+
+
   var loadMap = false;
   $(window).scroll(function() {
-    if (($(this).scrollTop() > 3000) && !loadMap) {
-      // alert('ok');
+    if (($(this).scrollTop() > 1000) && !loadMap) {
       loadMap = true;
-      // var elem = document.createElement('script');
-      // elem.src = 'https://api-maps.yandex.ru/2.1/?load=package.map&apikey=4d06fd11-2e89-4683-b283-c394a20d9ddc&lang=ru_RU';
-      // document.getElementsByTagName('body')[0].appendChild(elem);
-
-      var myMap = new ymaps.Map('map', {
-        center: [55.786852, 49.142351],
-        zoom: 17
-      }, {
-          searchControlProvider: 'yandex#search'
-      }),
-      // Создаём макет содержимого.
-      MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
-          '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
-      ),
-      myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-          hintContent: 'Наш офис',
-          balloonContent: 'Вход со двора'
-      }, {
-          // Опции.
-          // Необходимо указать данный тип макета.
-          iconLayout: 'default#image',
-          // Своё изображение иконки метки.
-          iconImageHref: 'img/marker.svg',
-          // Размеры метки.
-          iconImageSize: [30, 30],
-          // Смещение левого верхнего угла иконки относительно
-          // её "ножки" (точки привязки).
-          iconImageOffset: [-5, -38]
+      loadScript('https://api-maps.yandex.ru/2.1/?load=package.map&apikey=4d06fd11-2e89-4683-b283-c394a20d9ddc&lang=ru_RU&loadByRequire=1', function(){
+        ymaps.load(initMap);
       });
-  myMap.behaviors.disable('scrollZoom'); 
-  myMap.geoObjects
-      .add(myPlacemark);
     }
   });
+  //     $.getScript('https://api-maps.yandex.ru/2.1/?load=package.map&apikey=4d06fd11-2e89-4683-b283-c394a20d9ddc&lang=ru_RU');
+      // , 
+      
+  function initMap () {
+    // alert('ok');
+    // loadMap = true;
+
+    var myMap = new ymaps.Map('map', {
+      center: [55.786852, 49.142351],
+      zoom: 17
+    }, {
+      searchControlProvider: 'yandex#search'
+    }),
+    // Создаём макет содержимого.
+    MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+      '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+    ),
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+      hintContent: 'Наш офис',
+      balloonContent: 'Вход со двора'
+    }, {
+      // Опции.
+      // Необходимо указать данный тип макета.
+      iconLayout: 'default#image',
+      // Своё изображение иконки метки.
+      iconImageHref: 'img/marker.svg',
+      // Размеры метки.
+      iconImageSize: [30, 30],
+      // Смещение левого верхнего угла иконки относительно
+      // её "ножки" (точки привязки).
+      iconImageOffset: [-5, -38]
+    });
+    myMap.behaviors.disable('scrollZoom'); 
+    myMap.geoObjects.add(myPlacemark);
+  };
+
+      
+  //   }
+  // });
   
 // Как только будет загружен API и готов DOM, выполняем инициализацию
 
