@@ -227,6 +227,7 @@ $(document).ready(function () {
       center: [55.786852, 49.142351],
       zoom: 17
     }, {
+      autoFitToViewport: 'always',
       searchControlProvider: 'yandex#search'
     }),
     // Создаём макет содержимого.
