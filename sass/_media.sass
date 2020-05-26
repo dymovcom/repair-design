@@ -5,7 +5,7 @@
   .nav
     &__item
       margin-right: 1rem
-@media screen and ( max-width:  992px)
+@media screen and ( max-width:  991px)
   .header
     position: absolute
     &__menu
@@ -17,8 +17,6 @@
       display: none
     &__content
       margin-left: 0
-  .steps
-    display: none
   .row
     &--evenly
       justify-content: space-between
@@ -38,6 +36,8 @@
       max-width: 22rem
       margin-left: 0
   .section
+    padding-top: 1.5rem
+    padding-bottom: 0
     &-title
       &__heading
         &--primary
@@ -63,6 +63,8 @@
       margin-bottom: 30 * $rem
   .control
     // background-color: $dark
+    &__section-title
+      margin-top: 0
     &__video
       flex-basis: 100%
       min-height: rem(380px)
@@ -87,6 +89,7 @@
     &__card
       margin-bottom: 6.58rem
   .design
+    padding-bottom: 14rem
     &__card
       margin-bottom: 6.58rem
 @media screen and ( max-width:  570px)
@@ -139,11 +142,19 @@
         color: $light
     &__button
       margin: auto
+      margin-bottom: -1.8rem
       order: 5
     &__policy
       margin-bottom: rem(62px)
       &-label
         color: $light
+  .design
+    background-color: $dark
+    padding-bottom: 0
+    &__heading
+      color: $light
+    &__subtitle
+      color: $light
   .footer
     background: $dark
     &__wrap

@@ -1036,7 +1036,7 @@ img {
   .nav__item {
     margin-right: 1rem; } }
 
-@media screen and (max-width: 992px) {
+@media screen and (max-width: 991px) {
   .header {
     position: absolute; }
     .header__menu {
@@ -1047,8 +1047,6 @@ img {
     display: none; }
   .hero__content {
     margin-left: 0; }
-  .steps {
-    display: none; }
   .row--evenly {
     justify-content: space-between; }
   .col-22 {
@@ -1064,17 +1062,20 @@ img {
   .card__text {
     max-width: 22rem;
     margin-left: 0; }
-  .section-title__heading {
-    color: #E3B873;
-    font-size: 1.83rem;
-    line-height: 138%;
-    margin-bottom: 1.83rem; }
-  .section-title__phone {
-    display: block; }
-  .section-title__text {
-    font-size: 1.166rem;
-    line-height: 158%;
-    margin-bottom: 3rem; }
+  .section {
+    padding-top: 1.5rem;
+    padding-bottom: 0; }
+    .section-title__heading {
+      color: #E3B873;
+      font-size: 1.83rem;
+      line-height: 138%;
+      margin-bottom: 1.83rem; }
+    .section-title__phone {
+      display: block; }
+    .section-title__text {
+      font-size: 1.166rem;
+      line-height: 158%;
+      margin-bottom: 3rem; }
   .project-slider__text {
     width: 100%;
     max-width: 89.71429rem; }
@@ -1083,6 +1084,8 @@ img {
     max-width: 89.71429rem; }
   .project__swiper-slide {
     margin-bottom: 2.14286rem; }
+  .control__section-title {
+    margin-top: 0; }
   .control__video {
     flex-basis: 100%;
     min-height: 27.14286rem; }
@@ -1101,8 +1104,10 @@ img {
     margin-bottom: 2rem; }
   .types__card {
     margin-bottom: 6.58rem; }
-  .design__card {
-    margin-bottom: 6.58rem; } }
+  .design {
+    padding-bottom: 14rem; }
+    .design__card {
+      margin-bottom: 6.58rem; } }
 
 @media screen and (max-width: 570px) {
   .section-title__heading--primary {
@@ -1157,11 +1162,19 @@ img {
         color: #FFFFFF; }
     .control__button {
       margin: auto;
+      margin-bottom: -1.8rem;
       order: 5; }
     .control__policy {
       margin-bottom: 4.42857rem; }
       .control__policy-label {
         color: #FFFFFF; }
+  .design {
+    background-color: #131313;
+    padding-bottom: 0; }
+    .design__heading {
+      color: #FFFFFF; }
+    .design__subtitle {
+      color: #FFFFFF; }
   .footer {
     background: #131313; }
     .footer__wrap {
