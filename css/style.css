@@ -1277,6 +1277,22 @@ img {
     .modal__button {
       padding: 1rem 2.3rem; } }
 
+@media screen and (max-height: 450px) {
+  .hero {
+    height: 130vh; }
+  .modal {
+    overflow-y: scroll; }
+    .modal__dialog {
+      padding: 0.7rem 3rem 0.7rem 3rem; }
+    .modal__title {
+      margin-bottom: 0.7rem; }
+    .modal__input-group {
+      margin-bottom: 1rem; }
+    .modal__policy {
+      margin-bottom: 1rem; }
+    .modal__button {
+      padding: 1rem 1.5rem; } }
+
 @media screen and (max-width: 400px) {
   .section-title__text {
     max-width: 24.57143rem; }

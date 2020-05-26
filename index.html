@@ -12,6 +12,8 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <!-- Yandex.Metrika counter --> <script> (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(64376824, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/64376824" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+
   <div id="upbutton"></div>
 
   <header class="header">
@@ -221,7 +223,7 @@
             <input type="tel" name="userPhone" class="input form__input control__input" id="control-user-phone" placeholder="Ваш номер телефона:">
           </div>
           <!-- /.control__input-group -->
-          <button class="button button--primary control__button">Отправить</button>
+          <button onclick="ym(64376824,'reachGoal','control_button'); return true;" class="button button--primary control__button">Отправить</button>
           <div class="policy control__policy">
             <input type="checkbox" name="policyCheckbox" id="control__policy-checkbox" class="policy__checkbox" checked>
             <label for="control__policy-checkbox" class="policy__label control__policy-label">Я соглашаюсь с обработкой данных</label>
@@ -586,7 +588,7 @@
           <label for="modal__policy-checkbox" class="policy__label">Я соглашаюсь с обработкой данных</label>
         </div>
         <!-- /.policy -->
-        <button class="button button--primary modal__button">Отправить заявку</button>
+        <button onclick="ym(64376824,'reachGoal','modal__button'); return true;" class="button button--primary modal__button">Отправить заявку</button>
       </form>
     </div>
     <!-- /.modal__dialog -->
