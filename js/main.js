@@ -187,7 +187,7 @@ $(document).ready(function () {
 
     var script = document.createElement("script");
   
-    if (script.readyState){  //IE
+    if (script.readyState) {
       script.onreadystatechange = function(){
         if (script.readyState == "loaded" ||
                 script.readyState == "complete"){
@@ -195,7 +195,7 @@ $(document).ready(function () {
           callback();
         }
       };
-    } else {  //Другие браузеры
+    } else { 
       script.onload = function(){
         callback();
       };
@@ -216,13 +216,8 @@ $(document).ready(function () {
       });
     }
   });
-  //     $.getScript('https://api-maps.yandex.ru/2.1/?load=package.map&apikey=4d06fd11-2e89-4683-b283-c394a20d9ddc&lang=ru_RU');
-      // , 
       
   function initMap () {
-    // alert('ok');
-    // loadMap = true;
-
     var myMap = new ymaps.Map('map', {
       center: [55.786852, 49.142351],
       zoom: 17
