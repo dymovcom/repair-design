@@ -255,6 +255,12 @@
       &--center
         font-size: 1.328rem
         justify-content: flex-start
+  .button
+    &--to-home
+      display: inline
+  .footer__policy .invalid, .control__policy .invalid
+    left: 0
+    margin-left: 0
 @media screen and ( max-height:  575px)
   .header
     position: absolute
@@ -263,6 +269,10 @@
       display: none
     &::after
       display: none
+  .swiper
+    &-slide
+      &__image
+        margin-bottom: 2rem
   .modal
     overflow-y: scroll
     &__dialog
@@ -290,6 +300,9 @@
       margin-bottom: 1rem
     &__button
       padding: 1rem 1.5rem
+@media screen and ( max-height:  350px)
+  .hero
+    height: 145vh
 @media screen and ( max-width:  400px)
   .section
     &-title
@@ -304,6 +317,8 @@
   .hero
     &__content
       max-width: 100%
+    &__text
+      max-width: 26.5rem
     &__button
       min-width: 100%
     &::after

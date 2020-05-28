@@ -345,7 +345,9 @@ template {
     background-color: #E3B873;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     transition: box-shadow 0.3s; }
-    .button--primary:hover {
+  .button--to-home {
+    text-decoration: none; }
+    .button--to-home:hover {
       box-shadow: none; }
   .button--outline {
     padding: 18px 41px;
@@ -425,6 +427,9 @@ template {
       margin: 1.3rem auto 0 auto; }
       .section-title__subtitle--light {
         color: #FFFFFF; }
+    .section-title__phone {
+      color: #E3B873;
+      text-decoration: none; }
 
 .card__text {
   position: relative;
@@ -970,7 +975,9 @@ img {
     width: 100%;
     max-width: 66.07143rem;
     height: 33.21429rem;
-    margin-bottom: 4.71429rem; }
+    margin-bottom: 4.71429rem;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%); }
   .footer__menu {
     background-color: #131313;
     padding: 3.35714rem 0; }
@@ -1256,7 +1263,12 @@ img {
       height: 39px; }
   .policy__label--center {
     font-size: 1.328rem;
-    justify-content: flex-start; } }
+    justify-content: flex-start; }
+  .button--to-home {
+    display: inline; }
+  .footer__policy .invalid, .control__policy .invalid {
+    left: 0;
+    margin-left: 0; } }
 
 @media screen and (max-height: 575px) {
   .header {
@@ -1265,6 +1277,8 @@ img {
     display: none; }
   .hero::after {
     display: none; }
+  .swiper-slide__image {
+    margin-bottom: 2rem; }
   .modal {
     overflow-y: scroll; }
     .modal__dialog {
@@ -1294,6 +1308,10 @@ img {
     .modal__button {
       padding: 1rem 1.5rem; } }
 
+@media screen and (max-height: 350px) {
+  .hero {
+    height: 145vh; } }
+
 @media screen and (max-width: 400px) {
   .section-title__text {
     max-width: 24.57143rem; }
@@ -1303,6 +1321,8 @@ img {
     height: 202px; }
   .hero__content {
     max-width: 100%; }
+  .hero__text {
+    max-width: 26.5rem; }
   .hero__button {
     min-width: 100%; }
   .hero::after {

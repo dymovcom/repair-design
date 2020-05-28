@@ -223,8 +223,9 @@ $(document).ready(function () {
       zoom: 17
     }, {
       autoFitToViewport: 'always',
-      searchControlProvider: 'yandex#search'
+      // searchControlProvider: 'yandex#search'
     }),
+    
     // Создаём макет содержимого.
     MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
       '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
@@ -244,6 +245,8 @@ $(document).ready(function () {
       // её "ножки" (точки привязки).
       iconImageOffset: [-5, -38]
     });
+    myMap.controls.remove('trafficControl');
+    myMap.controls.remove('TypeSelector');
     myMap.behaviors.disable('scrollZoom'); 
     myMap.geoObjects.add(myPlacemark);
   };
@@ -303,5 +306,21 @@ $(document).ready(function () {
 //         .add(myPlacemark);
 // });
 
+  var player;
+  $('.video__play').on('click', function onYouTubeIframeAPIReady() {
 
+    player = new YT.Player('player', {
+      height: '100%',
+      width: '100%',
+      videoId: 'Y8Q9ptCXzL0',
+      events: {
+        'onReady': onPlayerReady
+      }
+    });
+  })
+
+  function onPlayerReady(event) {
+    event.target.playVideo();
+  }
+  
 });
